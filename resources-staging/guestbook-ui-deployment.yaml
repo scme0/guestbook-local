@@ -19,7 +19,7 @@ spec:
           name: guestbook-ui-test
           ports:
             - containerPort: 80
-        - resources:
-          limits:
-          memory: "64Mi"
-          cpu: "250m"
+        # - resources:
+        #   limits:
+        #   memory: "64Mi"
+        #   cpu: "250m"
