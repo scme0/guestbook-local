@@ -21,15 +21,5 @@ spec:
             - containerPort: 80
           readinessProbe:
             httpGet:
-              path: /healthz # Update to a non-existent path or endpoint
+              path: /nonExist # test degraded
               port: 80
-          #   initialDelaySeconds: 10
-          #   periodSeconds: 5
-          #   failureThreshold: 3
-          # livenessProbe:
-          #   httpGet:
-          #     path: /healthz # Update to a non-existent path or endpoint
-          #     port: 80
-          #   initialDelaySeconds: 15
-          #   periodSeconds: 10
-          #   failureThreshold: 5
