@@ -21,5 +21,5 @@ spec:
             - containerPort: 80
           readinessProbe:
             httpGet:
-              path: /nonExist # test degraded
+              path: /nonExists # test degraded
               port: 80
