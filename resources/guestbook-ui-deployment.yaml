@@ -1,4 +1,4 @@
-apiVersion: apps/v1
+sapiVersion: apps/v1
 kind: Deployment
 metadata:
   name: guestbook-ui
@@ -12,7 +12,7 @@ spec:
     metadata:
       labels:
         app: guestbook-ui
-        eti: vffffgffvdseddwsd
+        eti: vffffgffvdseddwsds
     spec:
       containers:
       - image: gcr.io/heptio-images/ks-guestbook-demo:0.1
