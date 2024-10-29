@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: guestbook-ui
 spec:
+  progressDeadlineSeconds: 60
   replicas: 2
   revisionHistoryLimit: 3
   selector:
@@ -14,7 +15,6 @@ spec:
         app: guestbook-ui
         eti: vffffgffvdsssad
     spec:
-      progressDeadlineSeconds: 60
       containers:
         - image: gcr.io/heptio-images/ks-guestbook-demo:0.1
           name: guestbook-ui-test
