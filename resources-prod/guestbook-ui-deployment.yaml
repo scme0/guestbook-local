@@ -19,7 +19,11 @@ spec:
           name: guestbook-ui-test
           ports:
             - containerPort: 80
-          readinessProbe:
-            httpGet:
-              path: /nonExist # test degraded
-              port: 80
+          # readinessProbe:
+          #   httpGet:
+          #     path: /nonExist # test degraded
+          #     port: 80
+      initContainers:
+        - name: init-myservice
+          image: scmesadfsdf:1.28
+          command: ['echo', '"hello world!"']
