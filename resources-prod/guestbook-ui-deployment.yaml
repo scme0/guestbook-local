@@ -14,6 +14,7 @@ spec:
         app: guestbook-ui
         eti: vffffgffvdsssad
     spec:
+      progressDeadlineSeconds: 60
       containers:
         - image: gcr.io/heptio-images/ks-guestbook-demo:0.1
           name: guestbook-ui-test
