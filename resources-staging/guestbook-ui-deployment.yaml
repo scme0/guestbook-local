@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: guestbook-ui
 spec:
+  progressDeadlineSeconds: 60
   replicas: 2
   revisionHistoryLimit: 3
   selector:
@@ -19,3 +20,7 @@ spec:
           name: guestbook-ui-test
           ports:
             - containerPort: 80
+          readinessProbe:
+            httpGet:
+              path: /nonExist # test degraded
+              port: 80
