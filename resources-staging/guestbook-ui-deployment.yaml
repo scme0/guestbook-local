@@ -17,13 +17,13 @@ spec:
     spec:
       containers:
         - name: sleep
-          image: alpine:3.8
-          command: [sh, -c]
-          args: [exit 1]
-        # - image: gcr.io/heptio-images/ks-guestbook-demo:0.1
-        #   name: guestbook-ui-test
-        #   ports:
-        #     - containerPort: 80
+          image: gcr.io/heptio-images/ks-guestbook-demo:0.2
+          command: [ sh, -c ]
+          args: [ exit 1 ]
+          # - image: gcr.io/heptio-images/ks-guestbook-demo:0.1
+          #   name: guestbook-ui-test
+          #   ports:
+          #     - containerPort: 80
           # readinessProbe:
           #   httpGet:
           #     path: /nonExist # test degraded
